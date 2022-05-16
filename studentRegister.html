@@ -1,0 +1,97 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Student Register</title>
+	<link rel="stylesheet" type="text/css" href="student.css">
+</head>
+<body>
+	<div class="container">
+		<div id="head">
+			<div>
+				<h2>Student Register</h2>
+			</div>
+			<div align='center'>
+				<input type="text" id="search" placeholder="Search by RollNo, Name">
+				<button type="button" class="searchbtn" onclick="search()">Search</button>
+			</div>
+			<div align='right'>
+				<button onclick="displayAll()" class="btn">Display All Student</button>
+				<button onclick="addStudent()" class="btn">Add Student</button>
+			</div>
+		</div>
+		<div class="content">
+			<div id="form">
+				<div>
+					<h2>Student details</h2>
+                    <h3>Roll Number: <span id="rollno"></span></h3>
+				</div>
+				<hr size="2" color="gray" style="margin-bottom: 20px; clear: both;">
+				<form>
+					<div class="form-group">
+						<label for="fname">First Name:</label>
+						<input type="text" id="fname" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="lname">Last Name:</label>
+						<input type="text" id="lname" class="form-control">
+					</div> 
+					<div class="form-group">
+						<label for="age">Age:</label>
+						<input type="number" id="age" class="form-control">
+					</div>
+					<div class="form-group">
+						<label>Gender:</label>
+						<input type="radio" id="male" name="gender" value="Male">
+						<label for="male">Male</label>
+						<input type="radio" id="female" name="gender" value="Female">
+						<label for="female">Female</label>
+					</div>
+					<div>
+						<b>Enter Marks:</b>
+					</div>
+					<div class="form-group">
+						<label for="mathmark">Math Mark:</label>
+						<input type="number" id="mathmark" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="englishmark">English Mark:</label>
+						<input type="number" id="englishmark" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="computermark">Computer Mark:</label>
+						<input type="number" id="computermark" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="favsubject">Favourite Subject:</label>
+						<select multiple="" id="favsubject">
+							<option>Math</option>
+							<option>English</option>
+							<option>Computer</option>
+							<option>Physics</option>
+						</select>
+					</div>
+					<div align="right" id="formbtn">
+						<button type="button" onclick="add()" id="addbtn">Add</button>
+					</div>
+				</form>
+			</div>
+			<div id="tb">
+				<table id="table">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Age</th>
+							<th>Roll No.</th>
+							<th>Gender</th>
+							<th width="320px">Action</th>
+						</tr>
+					</thead>
+					<tbody id="tablebody"></tbody>
+				</table>
+			</div>
+			<div id="carddiv"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="student.js"></script>
+</body>
+</html>
